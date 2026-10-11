@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>NetSynq</AssemblyName>
+    <RootNamespace>NetSynq</RootNamespace>
+    <Version>1.0.0</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <!-- nessun pacchetto NuGet: solo librerie standard di .NET -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="logo.png" />
+    <!-- dizionari dei testi (it/en): modificabili, incorporati nell'exe -->
+    <EmbeddedResource Include="Lang\it.json" LogicalName="lang.it.json" />
+    <EmbeddedResource Include="Lang\en.json" LogicalName="lang.en.json" />
+  </ItemGroup>
+
+</Project>

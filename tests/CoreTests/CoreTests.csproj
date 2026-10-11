@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>CoreTests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Il Core non dipende da WinForms: si compila e si testa anche senza Windows. -->
+    <Compile Include="../../src/NetSynq/Core/*.cs" LinkBase="Core" />
+    <EmbeddedResource Include="../../src/NetSynq/Lang/it.json" LogicalName="lang.it.json" />
+    <EmbeddedResource Include="../../src/NetSynq/Lang/en.json" LogicalName="lang.en.json" />
+  </ItemGroup>
+</Project>
